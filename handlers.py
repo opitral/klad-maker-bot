@@ -10,9 +10,11 @@ from core import Photo, Coordinates
 from filters import IsAdmin
 from keyboards import geo_request_kb
 
+
+logger = logging.getLogger(__name__)
+
 router = Router()
 router.message.filter(IsAdmin())
-logger = logging.getLogger(__name__)
 
 
 class PhotoInfo(StatesGroup):

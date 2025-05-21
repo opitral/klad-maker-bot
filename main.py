@@ -7,7 +7,7 @@ from aiogram.exceptions import TelegramBadRequest
 from handlers import router
 from settings import settings
 
-logging.basicConfig(level=logging.INFO)
+
 logger = logging.getLogger(__name__)
 
 
@@ -45,6 +45,7 @@ async def main():
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     try:
         asyncio.run(main())
     except (KeyboardInterrupt, SystemExit):
