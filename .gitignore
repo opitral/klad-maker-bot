@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+resources/photos/input/*
+!resources/photos/input/.gitkeep
+resources/photos/output/*
+!resources/photos/output/.gitkeep
