@@ -1,12 +1,11 @@
-import logging
 import asyncio
+import logging
 
 from aiogram import Dispatcher, Bot
-from aiogram.exceptions import TelegramBadRequest
+from aiogram.exceptions import TelegramForbiddenError
 
-from handlers import router
-from settings import settings
-
+from application.handlers import router
+from application.settings import settings
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +15,7 @@ async def notify_admins(bot: Bot, message: str):
         try:
             await bot.send_message(admin_telegram_id, message)
 
-        except TelegramBadRequest:
+        except TelegramForbiddenError:
             logging.warning(f"Failed to send message to admin {admin_telegram_id}")
 
         else:

@@ -3,7 +3,7 @@ from aiogram.filters import BaseFilter
 
 from aiogram.types import Message
 
-from settings import settings
+from .settings import settings
 
 
 class IsAdmin(BaseFilter):

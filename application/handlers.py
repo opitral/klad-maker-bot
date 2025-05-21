@@ -6,9 +6,9 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import Message, FSInputFile, ReplyKeyboardRemove
 
-from core import Photo, Coordinates
-from filters import IsAdmin
-from keyboards import geo_request_kb
+from .core import Photo, Coordinates
+from .filters import IsAdmin
+from .keyboards import geo_request_kb
 
 
 logger = logging.getLogger(__name__)
